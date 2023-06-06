@@ -1,8 +1,8 @@
-# telebirr 
+# telebirrweb
 
-Python package for integrating telebirr web API with your project.
+## Python package used to integrating telebirr web API with your project.
 
-# telebirrweb Integration Guide
+### telebirrweb Integration Guide
 
 #### Step 1:
 
