@@ -1,8 +1,8 @@
 # telebirr 
 
-Python package for integrating telebirr web API with your project.
+## Python package used to integrating telebirr web API with your project.
 
-# telebirrweb Integration Guide
+### Telebirr Web API Integration Guide
 
 #### Step 1:
 
@@ -22,7 +22,6 @@ totalAmount = 100
 notifyUrl =     "https://a.familysooq.com/api/payment/telebirr/confirm/product-post/"
 returnUrl = "https://familysooq.com/detail/1/"
 ```
-
 
 `appId`, `appKey`, and `shortCode` are given by telebirr adminstrator. The `timestamp` is the current time(request sent time) `nonce` and `outTradeNo` are unique generated numbers
 
@@ -54,6 +53,7 @@ ussdjson = {
    }
 ussdjson = json.dumps(ussdjson).encode('utf-8')
 ```
+
 
 #### Step 4:
 Encrypt the JSON object by using the public key (Use an environment variable to store the public key). The public key is provided by telebirr administrator. The encryption method is RSA 2048. In RSA 2048 the maximum allowed text size is 245. But in our case the text length is more than 245, so we split the data(text/cipher) up to 245 bytes and encrypt each chunk. Then concatenate the encrypted data.
@@ -88,12 +88,14 @@ except Exception as e:
    raise NotFound(e)
 ```
 
+
 #### Step 5:
 Create new `StringB` by hashing `StringA`. Use SHA256 to hash the given string.
 
 ```python
 stringB = sha256(stringA.encode()).hexdigest().upper()
 ```
+
 
 #### Step 6:
 Send a request to the given URL. The content-type format must be application/JSON. The request data are `appId`, `encrypted`, and `stringB`. `appId` is given by telebirr adminstrator. `Encrypted` is the encrypted data and `stringB` is hashed data.
@@ -141,6 +143,7 @@ The response is returned by the telebirr API. If the process is successful then 
 }
 ```
 
+
 #### Step 8:
 After success payment transaction telebirr notify the success transaction using notify url that is given by our system in step 1. The return data is encrypted string. So you must decrypt the text using the same public key given by telebirr adminstrator.
 
@@ -168,6 +171,7 @@ class PlainTextParser(BaseParser):
        """
        return stream.read()
 ```
+
 
 #### Step 9:
 Decrypt the request. 
