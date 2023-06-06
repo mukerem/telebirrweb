@@ -1,4 +1,4 @@
-# telebirr 
+# telebirrweb
 
 ## Python package used to integrating telebirr web API with your project.
 
@@ -10,17 +10,17 @@ Create required values for the telebirr API. There are 12 values needed to send 
 
 ```python
 url = "http://196.188.120.3:11443/ammapi/payment/service-openup/toTradeWebPay/"
-appId = "a00db682c0444a9bb80ce6b1a94a1ea1"
-appKey = "87d557614c344eda8adde60657f147b5"
-receiveName = "FamilySooq"
-shortCode = "220121"
+appId = "6uytgbhbjvdf4a9bb80ce6b1a94a1ea1"
+appKey = "fvhxvcxcxcxcveda8adde60657f147b5"
+receiveName = "Sell Good"
+shortCode = "001121"
 timeoutExpress = "5"
 timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 nonce = “GFGHG521DF5GDFG12DGFGD5FG46DFG5”
 outTradeNo = “78EYRFDBVJHXDJLCKXJVCXVKCV”
 totalAmount = 100
-notifyUrl =     "https://a.familysooq.com/api/payment/telebirr/confirm/product-post/"
-returnUrl = "https://familysooq.com/detail/1/"
+notifyUrl =     "https://example.com/"
+returnUrl = "https://example.com/"
 ```
 
 `appId`, `appKey`, and `shortCode` are given by telebirr adminstrator. The `timestamp` is the current time(request sent time) `nonce` and `outTradeNo` are unique generated numbers
@@ -104,8 +104,8 @@ This is sample data for the request
 
 ```python
 {
-   "appid": "a00db682c0444a9bb80ce6b1a94a1ea1",
-   "sign": "FBC7FC87F5C18A2142B8A905A885A244530D587E1243D0F2F05E2649494FC0A6",
+   "appid": "6uytgbhbjvdf4a9bb80ce6b1a94a1ea1",
+   "sign": "FAFAFC87F5C18A2142B8A905A885A244530D587E1243D0F2F05E2649494FC0A6",
    "ussd": "QHcp4WhzXO7QCSE8pOtEPbvJqxf4ERjd7z6pEDkukQ0/Hgfn1lq1oVLiJ2S5vHKAHurtu/dwmpRitJhJMY5y2zL6k38QFW5lJj7eWj17VwfYBvFUcVjQVl+pODwFEr5s+m9H9tiTdSDvSl+K3gXvUc4Vvray8nio/nHBE03+/asA0ZjW+RGpS+soU0qe8NBBugIArVjcEnZk33TzamXO9EIuY0riy2rgatEo1Q7B2fAJqIiPw0ArmvzX7a1/7WMcR9E5mlveMDoqHaNPsgI2AcHuxCBo38hdiVXGXUwOItn5DxEjIjkS1tGV78Rkanh01ENXJuB5bdihla7Xe+VxgWMqcricnQ/Wj2yztoAeGas+pgCvITgwpF9tpgHss470J07UjkTeFCWWJkrI0wZfEaedxonZR2barMcOP+40zoefbHBuc4uK0KYKZ0MgVEVfbvuSs/qc47q/NLIFFTw43Lpqu5zilFSEr+LnuYSvI68YiiTFNE5Ex3NBzOR7ixndvl/p+szRYy28ggmejJmfKsOP3E4UdOuCegDUPY4ml45YaPWZrPnlqxEilIIBtq+ckUhaLlfHuJBVSPgmUmnSrSu/fqPwe2PJKArtsS4EkyuxnqXfZUEuburd++mB1vLvr+c3WOsfqW5gEAh4B7EBCnvQk69Y5xiIdpYVGl2/0jQ="
 }
 
