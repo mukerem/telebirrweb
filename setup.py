@@ -1,16 +1,22 @@
 from distutils.core import setup
+from pathlib import Path
+# read the contents of your README file
+this_directory = Path(__file__).parent
+long_description = (this_directory / "README.md").read_text()
+
+
 setup(
   name = 'telebirrweb',
   packages = ['telebirrweb'],
-  version = '1.0.0',
+  version = '1.0.1',
   license='MIT',
   description = 'Python package used to integrate telebirr web API',
-  long_description="""# Markdown supported!\n\n* Cheer\n* Celebrate\n""",
-  long_description_content_type='text/markdown',
+  long_description= long_description,
+  long_description_content_type= 'text/markdown',
   author = 'Mukerem Ali',
   author_email = 'mukeremali112@gmail.com',
   url = 'https://github.com/mukerem/telebirrweb',
-  download_url = 'https://github.com/mukerem/telebirrweb/archive/refs/tags/v1.0.0.tar.gz', 
+  download_url = 'https://github.com/mukerem/telebirrweb/archive/refs/tags/v1.0.1.tar.gz', 
   install_requires=[
       'pycryptodome',
       'requests',
