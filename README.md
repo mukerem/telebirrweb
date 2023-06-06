@@ -257,7 +257,7 @@ The decrypted data consists of `msisdn`, `totalAmount`, `tradeDate`, `transactio
 
 **sample decrypted data**
 
-```json
+```python
 {
 'msisdn': '251900000032', 
 'totalAmount': '10',
