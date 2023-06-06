@@ -147,11 +147,11 @@ The response is returned by the telebirr API. If the process is successful then 
 #### Step 8:
 After success payment transaction telebirr notify the success transaction using notify url that is given by our system in step 1. The return data is encrypted string. So you must decrypt the text using the same public key given by telebirr adminstrator.
 
-*** They call your notify url API using text media as parser format. So your notify API must be accept Text /plain type request datas. ***
+** They call your notify url API using text media as parser format. So your notify API must be accept Text /plain type request datas. **
 
 This is sample notify data
    
-```python   b'QXxPG958j8RTifoKcONoelrH8XSP7vZWajUw2tR07b1/sypWU/sXQAPH0fCUI6jL4I/E7apmGy7CC9hQ4UU7YeYzXduPKgsWr65qrTZDKHKaVflYmwl9IdJCSJYGl36awdRZ4LsAhQ/Jp58XKkyR7848gNlFx0o3J2ziT/IdIRq13e12FwIhZiUzoOH0wmnoIVMiDJtZq+9A5GrsOPdy1V2nTM/tgl088tA97kIoNC4sqDKqyfbs1OY+CzdNb+LhvX/HlG/f2yWTE+ZQG1g+bWT+i33k/+vbvyIHFBdHr3snaJbDzUdYL9SGFUU2JcIvGr24xYLnybVpNtaB9uOjonBKLJqNTzq5sghed1IKYnghUemVU1nUoFXC/mGA+ePX0PqyzxYPt75sfeHUkTlmzDbc5fCFZpkPEbd6v2vtMOlcGrk3hhh2crAvfK7WmOtV/WnnNRFkqpKuJJV01+jPq+Sg+xCOjjphlw5/2gLkdpUSsGvNK8AQMAlG6BWKKtyIfKRaaY0clHmmcF4XVYk1tDoSSdIJw8cAKOwr/gvtFDd/8Z7VXu4376ELZeOEmKiNE+xV5usX92ltzTBwGuMci4FCFs7XBAqQgYdwrbfOoxVEnnND1cedOMWxshxB4tfHOfuloYBtH9dfUZGMgTJ3cy4BW/KSa9mF2JK64ZDen7I='
+```   b'QXxPG958j8RTifoKcONoelrH8XSP7vZWajUw2tR07b1/sypWU/sXQAPH0fCUI6jL4I/E7apmGy7CC9hQ4UU7YeYzXduPKgsWr65qrTZDKHKaVflYmwl9IdJCSJYGl36awdRZ4LsAhQ/Jp58XKkyR7848gNlFx0o3J2ziT/IdIRq13e12FwIhZiUzoOH0wmnoIVMiDJtZq+9A5GrsOPdy1V2nTM/tgl088tA97kIoNC4sqDKqyfbs1OY+CzdNb+LhvX/HlG/f2yWTE+ZQG1g+bWT+i33k/+vbvyIHFBdHr3snaJbDzUdYL9SGFUU2JcIvGr24xYLnybVpNtaB9uOjonBKLJqNTzq5sghed1IKYnghUemVU1nUoFXC/mGA+ePX0PqyzxYPt75sfeHUkTlmzDbc5fCFZpkPEbd6v2vtMOlcGrk3hhh2crAvfK7WmOtV/WnnNRFkqpKuJJV01+jPq+Sg+xCOjjphlw5/2gLkdpUSsGvNK8AQMAlG6BWKKtyIfKRaaY0clHmmcF4XVYk1tDoSSdIJw8cAKOwr/gvtFDd/8Z7VXu4376ELZeOEmKiNE+xV5usX92ltzTBwGuMci4FCFs7XBAqQgYdwrbfOoxVEnnND1cedOMWxshxB4tfHOfuloYBtH9dfUZGMgTJ3cy4BW/KSa9mF2JK64ZDen7I='
 ```
 
 Create text parser for the DRF api
